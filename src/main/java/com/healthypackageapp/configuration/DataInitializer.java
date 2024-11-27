@@ -8,6 +8,7 @@ import com.healthypackageapp.repository.UserRepository;
 import jakarta.annotation.PostConstruct;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Profile;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
 import java.util.Set;
@@ -17,6 +18,7 @@ import java.util.Set;
  * It should not be used in production environments.
  */
 @Configuration
+@Profile("dev")
 public class DataInitializer {
 
     @Autowired
