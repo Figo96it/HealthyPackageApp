@@ -48,12 +48,14 @@ public class DataInitializer {
         user.setUsername("user");
         user.setPassword(passwordEncoder.encode("user123"));
         user.setRoles(Set.of(userRole));
+        user.setEmail("testuser@gmail.com");
         userRepository.save(user);
 
         User admin = new User();
         admin.setUsername("admin");
         admin.setPassword(passwordEncoder.encode("admin123"));
         admin.setRoles(Set.of(adminRole));
+        admin.setEmail("testadmin@gmail.com");
         userRepository.save(admin);
 
         System.out.println("Test data initialized.");
